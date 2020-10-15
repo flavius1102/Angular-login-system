@@ -1,0 +1,36 @@
+#hirlevel {
+  background-color: beige;
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid bisque;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #333333;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+#hirlevel-button {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+  padding: 5px;
+
+}
+
+input {
+  width: 85%;
+  margin: 0 auto;
+}
+
+

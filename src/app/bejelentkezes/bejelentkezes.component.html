@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <form class="urlap" (ngSubmit)="bejelentkezesSubmit()" #bejelentkezes="ngForm">
+        <div id="bejelentkezesUser" ngModelGroup="bejelentkezesUser" #bejelentkezesUser='ngModelGroup'>
+          <div class="form-group">
+            <label for="bejelentkezesNev">Felhasználónév</label>
+            <input type="text" id="bejelentkezesNev" name="bejelentkezesNev" class="form-control" required ngModel #bejelentkezesNev='ngModel'>
+            <span class="text-danger" *ngIf="!bejelentkezesNev.valid">A felhasználónév mező kitöltése kötelező!</span>
+          </div>
+          <div class="form-group">
+            <label for="bejelentkezesJelszo">Jelszó</label>
+            <input type="password" id="bejelentkezesJelszo" name="bejelentkezesJelszo" class="form-control" required ngModel #bejelentkezesJelszo='ngModel'>
+            <span class="text-danger" *ngIf="!bejelentkezesJelszo.valid">A jelszó mező kitöltése kötelező!</span>
+          </div>
+          <button id="bejelentkezes-button" type="submit" class="btn btn-success" [disabled]="!bejelentkezes.valid"><a id="osszehasonlit" (click)="osszehasonlit()">Bejelentkezés</a></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

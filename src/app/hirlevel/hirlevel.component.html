@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h2>Feliratkozás hírlevélre</h2>
+      <form id="hirlevel" (ngSubmit)="hirlevelSubmit()" #hirlevel="ngForm">
+          <div id="hirlevelUser-adat" ngModelGroup="hirlevelUser" #hirlevelUser="ngModelGroup">
+          <div class="form-group">
+            <label for="hirlevel-nev">Név</label>
+            <input type="text" id="hirlevel-nev" name="hirlevel-nev" class="form-control" #hirlevelNev='ngModel' required ngModel>
+            <span class="text-danger" *ngIf="!hirlevelNev.valid">A név mezőt kötelező kitölteni!</span>
+          </div>
+          <div class="form-group">
+            <label for="hirlevel-email">Email-cím</label>
+            <input type="text" id="hirlevel-email" name="hirlevel-email" class="form-control" required ngModel #hirlevelEmail='ngModel'>
+            <span class="text-danger" *ngIf="!hirlevelEmail.valid">Az email címet kötelező megadni!</span>
+          </div>
+          <div id="hirlevel-button">
+            <button type="submit" class="btn btn-success" [disabled]="!hirlevel.valid">Feliratkozom</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <form id="kapcsolat" (ngSubmit)="kapcsolatSubmit()" #kapcsolat="ngForm">
+        <div id="kapcsolatUser" ngModelGroup="kapcsolatUser" #kapcsolatUser="ngModelGroup">
+          <h2>Kapcsolat</h2>
+          <div class="form-group">
+            <label for="nev">Név (kötelező)</label>
+            <input type="text" id="nev" name="nev" class="form-control" required ngModel #kapcsolatNev='ngModel'>
+            <span class="text-danger" *ngIf="!kapcsolatNev.valid">A név mezőt kötelező kitölteni!</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email-cím (kötelező)</label>
+            <input type="email" id="email" name="email" class="form-control" required ngModel #kapcsolatEmail='ngModel'>
+            <span class="text-danger" *ngIf="!kapcsolatEmail.valid">Az email-címet kötelező kitölteni!</span>
+          </div>
+          <div class="form-group">
+            <label for="uzenet">Üzenet</label>
+            <textarea id="uzenet" name="uzenet" rows="10" class="form-control" ngModel #kapcsolatUzenet='ngModel'></textarea>
+          </div>
+          <div id="button">
+            <button type="submit" class="btn btn-success" [disabled]="!kapcsolat.valid">Elküld</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

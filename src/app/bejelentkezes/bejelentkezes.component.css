@@ -1,0 +1,31 @@
+.urlap {
+  background-color: beige;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid bisque;
+  border-radius: 10px;
+}
+
+label {
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+  padding: 5px;
+
+}
+
+input {
+  width: 85%;
+  margin: 0 auto;
+}
+
+button {
+  width: 30%;
+  margin: 0 auto;
+}
+
+a {
+  color: white;
+}
